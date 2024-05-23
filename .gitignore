@@ -1,0 +1,39 @@
+**/node_modules/
+**/build/
+**/out/
+**/dist/
+**/coverage/
+*.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# cache files:
+**/.npm
+**/.eslintcache
+
+# dotenv environment variables files
+**/.env.production
+**/.env.prod
+
+# IDE related user settings
+## IntelliJ:
+**/.idea/*.iml
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+##VS Code:
+.vscode-test
+
+# yarn v2
+**/.yarn/cache
+**/.yarn/unplugged
+**/.yarn/build-state.yml
+**/.yarn/install-state.gz
+**/yarn-debug.log*
+**/yarn-error.log*
