@@ -29,3 +29,5 @@ This will fix an issue with displaying file name in Git Bash console like this:
 ```
 new file: "@root/\320\277\....txt"
 ```
+
+blah
