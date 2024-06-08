@@ -22,7 +22,7 @@ const FileCard = ({ name, path, type, size }) => {
     <li>
       {type === 'folder' ? (
         <div className='file__info'>
-          <Folder color='red' size='medium' />
+          <Folder color='magenta' size='medium' />
           <a href={`/api/content?path=${path}`} className='file__name'>
             {name}
           </a>
