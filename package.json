@@ -8,9 +8,9 @@
     "server"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail -n \"server,client\" \"cd server && npm run dev\" \"cd client && npm run dev\"",
-    "dev:client": "cd client && npm run dev",
-    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently --kill-others-on-fail -n \"server,client\" \"yarn --cwd=server dev\" \"yarn --cwd=client dev\"",
+    "dev:client": "yarn --cwd=client dev",
+    "dev:server": "yarn --cwd=server dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
