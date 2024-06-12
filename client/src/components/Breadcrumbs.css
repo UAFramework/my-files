@@ -1,0 +1,22 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #333; /* змініть колір на потрібний */
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  background-color: #f0f0f0; /* змініть колір на потрібний */
+}
+
+.breadcrumb-item a:hover {
+  background-color: #ddd; /* змініть колір на потрібний */
+}
