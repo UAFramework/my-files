@@ -1,4 +1,4 @@
-.file__info {
+.file-info {
   display: flex;
   background-color: rgb(156, 218, 220);
   align-items: center;
@@ -10,17 +10,17 @@
   margin: 10px;
 }
 
-.file__name {
+.file-name {
   font-size: 16px;
   font-weight: 400;
 }
 
-.file__subtitle {
+.file-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
 
-.file__description--container {
+.file-description-container {
   display: flex;
   flex-direction: column;
   margin: 5px;

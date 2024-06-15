@@ -1,0 +1,39 @@
+name	"@root"
+type	"folder"
+path	"/"
+items
+0
+name	"one"
+path	"/one"
+type	"folder"
+1
+name	"x - y"
+path	"/x - y"
+type	"folder"
+2
+name	"x y"
+path	"/x y"
+type	"folder"
+3
+name	"x'y"
+path	"/x'y"
+type	"folder"
+4
+name	"привіт"
+path	"/привіт"
+type	"folder"
+5
+name	"11184.jpg"
+path	"/11184.jpg"
+type	"file"
+size	"96.4 kB"
+6
+name	"Kilted Yoga  - The Jersey Edition.mp4"
+path	"/Kilted Yoga  - The Jersey Edition.mp4"
+type	"file"
+size	"5.01 MB"
+7
+name	"hello.txt"
+path	"/hello.txt"
+type	"file"
+size	"1.1 kB"

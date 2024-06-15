@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import FileCard from './components/FileCard'
+import ItemCard from './components/ItemCard'
 
 function App() {
   const [files, setFiles] = useState(null)
@@ -21,7 +21,7 @@ function App() {
         <h1>{files.path}</h1>
         <ul style={{ listStyleType: 'none' }}>
           {files.items?.map(({ type, path, name, size }, idx) => (
-            <FileCard type={type} path={path} name={name} size={size} key={`${idx}`} />
+            <ItemCard type={type} path={path} name={name} size={size} key={`${idx}`} />
           ))}
         </ul>
       </>
