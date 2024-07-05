@@ -1,0 +1,28 @@
+import { Folder, DocumentTxt, DocumentImage, Play } from 'grommet-icons'
+
+const FolderItemsCard = ({ name, path, type, size }) => {
+  return (
+    <li>
+      {type === 'folder' ? (
+        <div className='file-info'>
+          <Folder color='magenta' size='medium' />
+          <a href={`/api/content?path=${path}`} className='file-name'>
+            {name}
+          </a>
+        </div>
+      ) : (
+        <div className='file-info'>
+          {renderFileIcon(fileExtension)}
+          <div className='file-description-container'>
+            <a href={`/api/content?path=${path}`} className='file-name'>
+              {name}
+            </a>
+            <p className='file-subtitle'>{size}</p>
+          </div>
+        </div>
+      )}
+    </li>
+  )
+}
+
+export default FolderItemsCard

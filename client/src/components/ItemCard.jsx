@@ -1,40 +1,31 @@
 import './ItemCard.css'
+import { Folder as FolderIcon } from 'grommet-icons'
+import FileIcon from './FileIcon'
 
-import { Folder, DocumentTxt, DocumentImage, Play } from 'grommet-icons'
-
-const ItemCard = ({ name, path, type, size }) => {
-  const splittedNameArray = name.split('.')
+const ItemCard = ({ item, fetchFiles }) => {
+  const splittedNameArray = item.name.split('.')
   const fileExtension = splittedNameArray[splittedNameArray.length - 1]
 
-  const renderFileIcon = (fileExtension) => {
-    if (fileExtension === 'txt') {
-      return <DocumentTxt color='green' />
-    }
-    if (fileExtension === 'jpg') {
-      return <DocumentImage color='yellow' />
-    }
-    if (fileExtension === 'mp4') {
-      return <Play color='blue' />
-    }
+  const handleFolderClick = () => fetchFiles(item.path)
+
+  const handleFileClick = () => {
+    // TODO:
+    // implement this handler
   }
 
   return (
-    <li>
-      {type === 'folder' ? (
-        <div className='file-info'>
-          <Folder color='magenta' size='medium' />
-          <a href={`/api/content?path=${path}`} className='file-name'>
-            {name}
-          </a>
+    <li className='file-item'>
+      {item.type === 'folder' ? (
+        <div className='file-info' onClick={handleFolderClick}>
+          <FolderIcon color='magenta' size='medium' />
+          {item.name}
         </div>
       ) : (
-        <div className='file-info'>
-          {renderFileIcon(fileExtension)}
+        <div className='file-info' onClick={handleFileClick}>
+          <FileIcon fileExtension={fileExtension} />
           <div className='file-description-container'>
-            <a href={`/api/content?path=${path}`} className='file-name'>
-              {name}
-            </a>
-            <p className='file-subtitle'>{size}</p>
+            {item.name}
+            <p className='file-subtitle'>{item.size}</p>
           </div>
         </div>
       )}

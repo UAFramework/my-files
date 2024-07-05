@@ -20,8 +20,8 @@ function App() {
       <>
         <h1>{files.path}</h1>
         <ul style={{ listStyleType: 'none' }}>
-          {files.items?.map(({ type, path, name, size }, idx) => (
-            <ItemCard type={type} path={path} name={name} size={size} key={`${idx}`} />
+          {files.items?.map((item, idx) => (
+            <ItemCard key={`${idx}`} item={item} fetchFiles={fetchFiles} />
           ))}
         </ul>
       </>
