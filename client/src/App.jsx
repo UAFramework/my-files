@@ -3,7 +3,7 @@ import './App.css'
 import ItemCard from './components/ItemCard'
 
 function App() {
-  const [files, setFiles] = useState(null)
+  const [files, setFiles] = useState([])
 
   const fetchFiles = async (path) => {
     const response = await fetch(`/api/content?path=${path}`)
