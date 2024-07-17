@@ -15,5 +15,10 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "grommet": "^2.39.0",
+    "grommet-icons": "^4.12.1",
+    "styled-components": "^6.1.11"
   }
 }

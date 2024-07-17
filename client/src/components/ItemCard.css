@@ -1,0 +1,27 @@
+.file-info {
+  display: flex;
+  background-color: rgb(118, 37, 82);
+  align-items: center;
+  column-gap: 10px;
+  max-width: 80%;
+  padding: 8px;
+  border: 1px solid rgb(42, 41, 70);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.file-name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.file-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.file-description-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import ItemCard from './components/ItemCard'
 
 function App() {
-  const [files, setFiles] = useState(null)
+  const [files, setFiles] = useState([])
 
   const fetchFiles = async (path) => {
     const response = await fetch(`/api/content?path=${path}`)
@@ -18,9 +19,9 @@ function App() {
     files && (
       <>
         <h1>{files.path}</h1>
-        <ul>
-          {files.items?.map(({ type, path, name }, idx) => (
-            <li key={`${idx}`}>{type === 'folder' ? name : <a href={`/api/content?path=${path}`}>{name}</a>}</li>
+        <ul style={{ listStyleType: 'none' }}>
+          {files.items?.map((item, idx) => (
+            <ItemCard key={`${idx}`} item={item} fetchFiles={fetchFiles} />
           ))}
         </ul>
       </>
