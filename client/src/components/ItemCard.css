@@ -25,3 +25,10 @@
   flex-direction: column;
   margin: 5px;
 }
+
+#item-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
