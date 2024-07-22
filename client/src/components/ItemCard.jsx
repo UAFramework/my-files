@@ -48,6 +48,7 @@ const ItemCard = ({ item, fetchFiles }) => {
           {showFileContent && (
             <Layer position='center' onClickOutside={onClose} onEsc={onClose}>
               <Box pad='medium' gap='small' width='large' height='large'>
+                <h5>{item.name}</h5>
                 <iframe
                   style={{ width: '100%', height: '100%', border: 'none' }}
                   src={`/api/content?path=${item.path}`}
