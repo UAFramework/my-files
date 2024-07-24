@@ -14,8 +14,11 @@ const ItemCard = ({ item, fetchFiles }) => {
 
   const handleFileClick = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // TODO:
     // implement this handler
+=======
+>>>>>>> repair
 =======
 >>>>>>> repair
     setShowFileContent(true)
