@@ -13,14 +13,6 @@ const ItemCard = ({ item, fetchFiles }) => {
   const handleFolderClick = () => fetchFiles(item.path)
 
   const handleFileClick = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // TODO:
-    // implement this handler
-=======
->>>>>>> repair
-=======
->>>>>>> repair
     setShowFileContent(true)
   }
 
