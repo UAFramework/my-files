@@ -2,21 +2,41 @@
   display: flex;
   align-items: center;
   margin-bottom: 1em;
+  font-family: Arial, sans-serif;
 }
 
 .breadcrumb-item {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
   margin-right: 0.5em;
 }
 
 .breadcrumb-item a {
   text-decoration: none;
-  color: #333; /* змініть колір на потрібний */
+  color: inherit; /* Use the color from .breadcrumb-item */
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
-  background-color: #f0f0f0; /* змініть колір на потрібний */
+  background-color: #f8f9fa;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .breadcrumb-item a:hover {
-  background-color: #ddd; /* змініть колір на потрібний */
+  background-color: #e9ecef;
+}
+
+.breadcrumb-item::after {
+  content: '/';
+  margin: 0 0.5em;
+}
+
+.breadcrumb-item:last-child::after {
+  content: '';
+}
+
+.breadcrumb-item.active {
+  font-weight: bold;
+  color: #6c757d;
 }

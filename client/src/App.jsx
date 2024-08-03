@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Breadcrumbs from './components/breadcrumbs'
+import Breadcrumbs from './components/Breadcrumbs'
 import ItemCard from './components/ItemCard'
 import './App.css'
 

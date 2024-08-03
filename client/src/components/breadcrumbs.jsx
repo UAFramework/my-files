@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import './Breadcrumbs.css'
 
 // internal logic for breadcrumbs:
-//
 // "/"   -->  ["home"]
 // "/one" --> ["home", "one"]
 // "/one/one_one" --> ["home", "one", "one_one"] --> home / one / one_one
@@ -14,17 +14,20 @@ const Breadcrumbs = ({ currentPath, fetchFiles }) => {
   const [breadcrumbs, setBreadcrumbs] = useState([])
 
   useEffect(() => {
-    const pathnames = currentPath.split('/')
+    const pathnames = currentPath === '/' ? [``] : currentPath.split('/').slice(1)
+    console.log('Current Path:', currentPath)
 
-    // TODO: not sure if we need this?
     const newBreadcrumbs = [{ name: 'home', path: '/' }]
 
     pathnames.forEach((name, index) => {
-      newBreadcrumbs.push({ name, path: currentPath })
+      if (name) {
+        const path = `/${pathnames.slice(0, index + 1).join('/')}`
+        newBreadcrumbs.push({ name, path })
+      }
     })
 
     setBreadcrumbs(newBreadcrumbs)
-  }, [])
+  }, [currentPath])
 
   return (
     <nav aria-label='Breadcrumb' className='breadcrumbs'>
@@ -33,7 +36,7 @@ const Breadcrumbs = ({ currentPath, fetchFiles }) => {
           <li
             key={index}
             className='breadcrumb-item'
-            onClick={(e) => {
+            onClick={() => {
               fetchFiles(breadcrumb.path)
             }}
           >
@@ -43,6 +46,11 @@ const Breadcrumbs = ({ currentPath, fetchFiles }) => {
       </ol>
     </nav>
   )
+}
+
+Breadcrumbs.propTypes = {
+  currentPath: PropTypes.string.isRequired,
+  fetchFiles: PropTypes.func.isRequired,
 }
 
 export default Breadcrumbs
