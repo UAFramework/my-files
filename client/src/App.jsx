@@ -20,7 +20,6 @@ function App() {
     files && (
       <>
         <Breadcrumbs currentPath={files.path} fetchFiles={fetchFiles} />
-        <h1>{files.path}</h1>
         <ul style={{ listStyleType: 'none' }}>
           {files.items?.map((item, idx) => (
             <ItemCard key={`${idx}`} item={item} fetchFiles={fetchFiles} />

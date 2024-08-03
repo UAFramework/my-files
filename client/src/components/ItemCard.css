@@ -1,13 +1,22 @@
+#root {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fcb911;
+  text-align: left;
+  color: beige;
+}
+
 .file-info {
   display: flex;
-  background-color: rgb(118, 37, 82);
+  background-color: rgb(85, 58, 8);
   align-items: center;
   column-gap: 10px;
   max-width: 80%;
   padding: 8px;
   border: 1px solid rgb(42, 41, 70);
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px auto;
 }
 
 .file-name {
