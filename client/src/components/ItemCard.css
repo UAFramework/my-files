@@ -1,12 +1,3 @@
-#root {
-  width: 80%;
-  margin: 0 auto;
-  padding: 2rem;
-  background: #fcb911;
-  text-align: left;
-  color: beige;
-}
-
 .file-info {
   display: flex;
   background-color: rgb(85, 58, 8);
