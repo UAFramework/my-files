@@ -1,10 +1,6 @@
-//import { useState, useEffect } from 'react'
-//import PropTypes from 'prop-types'
 import './Breadcrumbs.css'
 
 const Breadcrumbs = ({ currentPath, fetchFiles }) => {
-  const pathnames = currentPath === '/' ? [] : currentPath.split('/').slice(1)
-
   return (
     <nav aria-label='Breadcrumb' className='breadcrumbs'>
       <ul className='breadcrumb'>
