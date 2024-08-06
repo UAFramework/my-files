@@ -2,14 +2,6 @@
 //import PropTypes from 'prop-types'
 import './Breadcrumbs.css'
 
-// internal logic for breadcrumbs:
-// "/"   -->  ["home"]
-// "/one" --> ["home", "one"]
-// "/one/one_one" --> ["home", "one", "one_one"] --> home / one / one_one
-//
-// hint:
-// ["home", "one", "one_one"].join("/")
-
 const Breadcrumbs = ({ currentPath, fetchFiles }) => {
   const pathnames = currentPath === '/' ? [] : currentPath.split('/').slice(1)
 
