@@ -12,15 +12,18 @@ const Breadcrumbs = ({ currentPath, fetchFiles }) => {
           home
         </li>
         {currentPath !== '/' &&
-          pathnames.map((name, index) => {
-            const path = `/${pathnames.slice(0, index + 1).join('/')}`
+          currentPath
+            .split('/')
+            .slice(1)
+            .map((name, index, array) => {
+              const path = `/${array.slice(0, index + 1).join('/')}`
 
-            return (
-              <li key={index} className='breadcrumb-item' onClick={() => fetchFiles(path)}>
-                <span>{name}</span>
-              </li>
-            )
-          })}
+              return (
+                <li key={index} className='breadcrumb-item' onClick={() => fetchFiles(path)}>
+                  <span>{name}</span>
+                </li>
+              )
+            })}
       </ul>
     </nav>
   )
