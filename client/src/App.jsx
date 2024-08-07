@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import Breadcrumbs from './components/Breadcrumbs'
 import ItemCard from './components/ItemCard'
+import './App.css'
 
 function App() {
-  const [files, setFiles] = useState([])
+  const [files, setFiles] = useState(null)
 
   const fetchFiles = async (path) => {
     const response = await fetch(`/api/content?path=${path}`)
@@ -18,7 +19,7 @@ function App() {
   return (
     files && (
       <>
-        <h1>{files.path}</h1>
+        <Breadcrumbs currentPath={files.path} fetchFiles={fetchFiles} />
         <ul style={{ listStyleType: 'none' }}>
           {files.items?.map((item, idx) => (
             <ItemCard key={`${idx}`} item={item} fetchFiles={fetchFiles} />
